@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project Basic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #5D2E46;
+            font-weight: 800;
+        }
+
+        h2{
+            font-weight:600;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 50px;
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: 18px;
+            margin: 20px 0 30px;
+            font-weight: 500;
+        }
+
+        .rateButton {
+            display: block;
+            margin: 20px auto;
+            background: #5D2E46;
+            color: white;
+            font-size: 18px;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 6px;
+            border-color: #5D2E46;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: all 200ms ease-in-out;
+        }
+
+        .rateButton:hover {
+            cursor: pointer;
+            background: transparent;
+            border: 1px solid #5D2E46;
+            color: #5D2E46;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 15px 60px;
+            background: linear-gradient(to bottom right, #E8D6CB 0%, #D0ADA7 100%);
+            border-radius: 20px;
+        }
+
+        .miko-container {
+            background: #5D2E46;
+            color: white;
+            padding: 5px 0;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            font-size: 15px;
+        }
+
+        .catVideo {
+            color: #5D2E46;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .catVideo:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            color: #5D2E46;
+            font-style: italic;
+        }
+
+        hr{
+            border: 1px solid #5D2E46;
+            margin: 30px 0;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>My Cat</h1>
+        <div class="miko-container">
+            <h2>Miko the new catto</h2>
+        </div>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/116/497/original/1708797947342.jpg?1708797971" alt="Miko the catto" width="300">
+        <hr>
+        <p>
+            My family found <strong>Miko</strong> during an event at my parent's friend house.
+            She rarely comes when we call her but she <span style="color: #5D2E46">loves to be petted.</span>
+            She is a very quiet cat and she loves to sleep.
+            We have another 6 cats at home when we adopted Miko,
+            but all of them are very friendly and they love to play with Miko.
+        </p>
+
+        <a href="https://drive.google.com/file/d/1MYrhP30WCBAU7BbvOCi10gktSvbkLFZ8/view?usp=sharing" target="_blank" class="catVideo">Video of Miko</a>
+
+        <button class="rateButton">
+            Rate Miko's cuteness
+        </button>
+
+        <p class="footer">Coded by 'Aisyah Radzi</p>
+    </div>
+    <script>
+        function rateCuteness() {
+            let rate = prompt("Rate Miko's cuteness from 1 to 10");
+            if (rate >= 8) {
+                alert("Thank you for rating Miko's cuteness!");
+            } else {
+                alert("We will try to make Miko cuter!");
+            }
+        }
+
+        let rateButton = document.querySelector(".rateButton");
+        rateButton.addEventListener("click", rateCuteness);
+    </script>
+    
+
+</body>
+</html>
